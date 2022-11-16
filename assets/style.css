@@ -194,3 +194,11 @@ nav {
 ::placeholder {
    text-align: center;
 }
+
+.data {
+   font-weight: bold;
+}
+
+#today {
+   font-weight: bold;
+}
