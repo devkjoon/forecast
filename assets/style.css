@@ -1,4 +1,4 @@
-body{
+body {
    min-height: 100vh;
    display: flex;
    align-items: center;
@@ -8,143 +8,166 @@ body{
    height: 100vh;
    width: 100vw;
 }
-p{
+
+p {
    margin-bottom: 1vh;
 }
 
-.container{
+.container {
    justify-content: center;
 
 }
-.card{
+
+.card {
    border: 1.5vh solid black;
    border-radius: 2vh;
    margin: auto;
 }
-.col-8{
+
+.col-8 {
    border-top-left-radius: 0.5vh;
    border-bottom-left-radius: 0.5vh;
 }
-.left{
+
+.left {
    background-color: rgb(243, 243, 243);
    padding: 1rem;
    margin: 0;
 }
-.right{
+
+.right {
    padding: 1rem;
 }
-.row,.col{
+
+.row,
+.col {
    margin: 0;
    font-size: 1rem;
 }
-.top{
+
+.top {
    text-align: center;
    font-size: 0.65rem;
    padding: 2vh;
 }
-@media(max-width:768px){
-   .top{
-       text-align: center;
-       font-size: 0.5rem;
-       padding: 1vh;
+
+@media(max-width:768px) {
+   .top {
+      text-align: center;
+      font-size: 0.5rem;
+      padding: 1vh;
    }
-   .top .col{
-       padding:0 0.5vh;
+
+   .top .col {
+      padding: 0 0.5vh;
    }
 }
-.temp{
+
+.temp {
    padding: 8vh;
    text-align: center;
    font-size: 18vh;
    font-weight: bold;
 }
-@media(max-width:768px)
-{
-   .temp{
-       padding: 3vh 0vh;
-       text-align: center;
-       font-size: 9vh;
-       font-weight: bold;
+
+@media(max-width:768px) {
+   .temp {
+      padding: 3vh 0vh;
+      text-align: center;
+      font-size: 9vh;
+      font-weight: bold;
    }
 }
-@media(min-height:812px) and (min-width:769px)
-{
-   .temp{
-       padding: 3vh 0vh;
-       text-align: center;
-       font-size: 9vh;
-       font-weight: bold;
+
+@media(min-height:812px) and (min-width:769px) {
+   .temp {
+      padding: 3vh 0vh;
+      text-align: center;
+      font-size: 9vh;
+      font-weight: bold;
    }
 }
-.deg{
+
+.deg {
    height: 50%;
    background-color: rgb(189, 188, 188);
    border-radius: 5rem;
 }
-.time{
+
+.time {
    align-self: center;
    font-size: 0.8rem;
 }
-@media(max-width:768px)
-{
-   .time{
-       align-self: center;
-       font-size: o.8rem;
+
+@media(max-width:768px) {
+   .time {
+      align-self: center;
+      font-size: o.8rem;
    }
-   .time h2{
-       font-size: 0.9rem;
+
+   .time h2 {
+      font-size: 0.9rem;
    }
-   .col-5{
-       padding: 1vh 0;
+
+   .col-5 {
+      padding: 1vh 0;
    }
 }
-.bottom .row{
+
+.bottom .row {
    justify-content: center;
    font-size: 0.75rem;
 }
-.bottom .col{
-   padding: 3vh 0.3vw ;
+
+.bottom .col {
+   padding: 3vh 0.3vw;
    margin: 2vh;
 }
-@media(max-width:768px){
-   .bottom .col{
-       padding: 3vh 0.1vw;
-       margin: 0.03rem;
-   }  
+
+@media(max-width:768px) {
+   .bottom .col {
+      padding: 3vh 0.1vw;
+      margin: 0.03rem;
+   }
 }
-@media(min-height:812px) and (min-width:769px)
-{
-   .bottom .col{
-       padding: 3vh 0.1vw;
-       margin: 0.03rem;
-   }  
+
+@media(min-height:812px) and (min-width:769px) {
+   .bottom .col {
+      padding: 3vh 0.1vw;
+      margin: 0.03rem;
+   }
 }
-.border{
+
+.border {
    border-radius: 2vh;
 }
-.right .top{
+
+.right .top {
    justify-content: flex-end;
    text-align: right;
 }
-.timely .row{
+
+.timely .row {
    justify-content: flex-end;
    padding: 2vh;
 }
-.timely{
+
+.timely {
    margin-top: 25%;
 }
-@media(max-width:768px){
-   .timely .row{
-       justify-content: flex-end;
-       padding: 2vh 0;
-       font-size: 0.52rem;
+
+@media(max-width:768px) {
+   .timely .row {
+      justify-content: flex-end;
+      padding: 2vh 0;
+      font-size: 0.52rem;
    }
 }
-@media(max-width:320px)
-{
-   hr{
-       width: 0;
-       margin: 0;
+
+@media(max-width:320px) {
+   hr {
+      width: 0;
+      margin: 0;
    }
 }
 
