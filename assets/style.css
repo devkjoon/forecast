@@ -11,6 +11,7 @@ body{
 p{
    margin-bottom: 1vh;
 }
+
 .container{
    justify-content: center;
 
@@ -145,4 +146,28 @@ p{
        width: 0;
        margin: 0;
    }
+}
+
+#right-header {
+   font-size: 1rem;
+}
+
+nav {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.nav {
+   justify-content: space-between;
+}
+
+.searchbar {
+   height: 24px;
+   width: 199.28px;
+}
+
+::placeholder {
+   text-align: center;
 }
