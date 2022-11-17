@@ -38,70 +38,132 @@
               </div>
             </div>
             <div class="row bottom">
-              <div class="col"><hr /></div>
+              <div class="col"><span class="subtitle">-Temperature-</span></div>
               <div class="col">
-                <div class="row" id="day1">Sun</div>
-                <div class="row"><b>-4&deg;</b></div>
+                <div class="row" id="date1">Sun</div>
+                <div class="row data" id="date1Temp"><b>-4&deg;</b></div>
               </div>
               <div class="col">
-                <div class="row" id="day2">Mon</div>
-                <div class="row"><b>-5&deg;</b></div>
+                <div class="row" id="date2">Mon</div>
+                <div class="row data" id="date2Temp"><b>-5&deg;</b></div>
               </div>
               <div class="col">
-                <div class="row" id="day3">Tue</div>
-                <div class="row"><b>-10&deg;</b></div>
+                <div class="row" id="date3">Tue</div>
+                <div class="row data" id="date3Temp"><b>-10&deg;</b></div>
               </div>
               <div class="col">
-                <div class="row" id="day4">Wed</div>
-                <div class="row"><b>-4&deg;</b></div>
+                <div class="row" id="date4">Wed</div>
+                <div class="row data" id="date4Temp"><b>-4&deg;</b></div>
               </div>
               <div class="col">
-                <div class="row" id="day5">Thu</div>
-                <div class="row"><b>-2&deg;</b></div>
+                <div class="row" id="date5">Thu</div>
+                <div class="row data" id="date5Temp"><b>-2&deg;</b></div>
               </div>
               <div class="col"><hr /></div>
             </div>
             <div class="row bottom">
-              <div class="col"><hr /></div>
+              <div class="col"><span class="subtitle">-Weather-</span></div>
               <div class="col">
                 <div class="row">Humidity</div>
-                <div class="row data" id="humidity"><b>-4&deg;</b></div>
+                <div class="row data"><b>-4&deg;</b></div>
               </div>
               <div class="col">
                 <div class="row">Wind Speed</div>
-                <div class="row data" id="windspeed"><b>-5&deg;</b></div>
+                <div class="row data"><b>-5&deg;</b></div>
               </div>
               <div class="col">
                 <div class="row">Feels Like</div>
-                <div class="row data" id="feelslike"><b>-10&deg;</b></div>
+                <div class="row data"><b>-10&deg;</b></div>
               </div>
               <div class="col">
                 <div class="row">Sunset</div>
-                <div class="row data" id="sunset"><b>-4&deg;</b></div>
+                <div class="row data"><b>-4&deg;</b></div>
               </div>
               <div class="col">
                 <div class="row">Sunrise</div>
-                <div class="row data" id="sunrise"><b>-2&deg;</b></div>
+                <div class="row data"><b>-2&deg;</b></div>
+              </div>
+              <div class="col"><hr /></div>
+            </div>
+            <div class="row bottom">
+              <div class="col"><span class="subtitle">-Humidity-</span></div>
+              <div class="col">
+                <div class="row">Humidity</div>
+                <div class="row data"><b>-4&deg;</b></div>
+              </div>
+              <div class="col">
+                <div class="row">Wind Speed</div>
+                <div class="row data"><b>-5&deg;</b></div>
+              </div>
+              <div class="col">
+                <div class="row">Feels Like</div>
+                <div class="row data"><b>-10&deg;</b></div>
+              </div>
+              <div class="col">
+                <div class="row">Sunset</div>
+                <div class="row data"><b>-4&deg;</b></div>
+              </div>
+              <div class="col">
+                <div class="row">Sunrise</div>
+                <div class="row data"><b>-2&deg;</b></div>
+              </div>
+              <div class="col"><hr /></div>
+            </div>
+            <div class="row bottom">
+              <div class="col"><span class="subtitle">-Wind Speed-</span></div>
+              <div class="col">
+                <div class="row">Humidity</div>
+                <div class="row data"><b>-4&deg;</b></div>
+              </div>
+              <div class="col">
+                <div class="row">Wind Speed</div>
+                <div class="row data"><b>-5&deg;</b></div>
+              </div>
+              <div class="col">
+                <div class="row">Feels Like</div>
+                <div class="row data"><b>-10&deg;</b></div>
+              </div>
+              <div class="col">
+                <div class="row">Sunset</div>
+                <div class="row data"><b>-4&deg;</b></div>
+              </div>
+              <div class="col">
+                <div class="row">Sunrise</div>
+                <div class="row data"><b>-2&deg;</b></div>
               </div>
               <div class="col"><hr /></div>
             </div>
           </div>
           <div class="col-3 right">
-            <div class="row top" id="right-header">Hourly Temperature</div>
+            <div class="row top" id="right-header">Data Today</div>
             <div class="timely">
-              <div class="row">11:00 &nbsp; <b>-4&deg;</b></div>
-              <div class="row">12:00 &nbsp; <b>-4&deg;</b></div>
-              <div class="row">13:00 &nbsp; <b>-5&deg;</b></div>
-              <div class="row">14:00 &nbsp; <b>-7&deg;</b></div>
-              <div class="row">15:00 &nbsp; <b>-4&deg;</b></div>
+              <div class="row">
+                Humidity<span>:</span><b id="humidity">-4&deg;</b>
+              </div>
+              <div class="row">
+                Wind Speed<span>:</span><b id="windspeed">-4&deg;</b>
+              </div>
+              <div class="row">
+                Feels Like<span>:</span><b id="feelslike">-5&deg;</b>
+              </div>
+              <div class="row">
+                Temp High<span>:</span><b id="tempHigh">-7&deg;</b>
+              </div>
+              <div class="row">
+                Temp Low<span>:</span><b id="tempLow">-4&deg;</b>
+              </div>
               <div class="row">16:00 &nbsp; <b>-4&deg;</b></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script>
+      dayjs().format();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/script.js"></script>
   </body>

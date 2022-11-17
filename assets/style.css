@@ -5,7 +5,7 @@ body {
    justify-content: center;
    background-color: lavender;
    font-family: sans-serif;
-   height: 100vh;
+   height: 500px;
    width: 100vw;
 }
 
@@ -15,11 +15,10 @@ p {
 
 .container {
    justify-content: center;
-
 }
 
 .card {
-   border: 1.5vh solid black;
+   border: .5vh solid black;
    border-radius: 2vh;
    margin: auto;
 }
@@ -64,7 +63,7 @@ p {
 }
 
 .temp {
-   padding: 8vh;
+   padding: 7vh;
    text-align: center;
    font-size: 18vh;
    font-weight: bold;
@@ -120,8 +119,8 @@ p {
 }
 
 .bottom .col {
-   padding: 3vh 0.3vw;
-   margin: 2vh;
+   padding: 2vh 0.3vw;
+   margin: 1vh;
 }
 
 @media(max-width:768px) {
@@ -201,4 +200,9 @@ nav {
 
 #today {
    font-weight: bold;
+}
+
+.subtitle {
+   font-size: .75rem;
+   text-align: center;
 }
