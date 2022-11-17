@@ -59,35 +59,17 @@ let displayWeather = function (weatherData) {
 };
 
 let fiveDayWeather = function (weatherValue) {
-  const date1 = document.querySelector("#date1");
-  const date2 = document.querySelector("#date2");
-  const date3 = document.querySelector("#date3");
-  const date4 = document.querySelector("#date4");
-  const date5 = document.querySelector("#date5");
-
-  const date1Temp = document.querySelector("#date1Temp");
-  const date2Temp = document.querySelector("#date2Temp");
-  const date3Temp = document.querySelector("#date3Temp");
-  const date4Temp = document.querySelector("#date4Temp");
-  const date5Temp = document.querySelector("#date5Temp");
-
   let todaysMonth = dayjs().$M;
-  let tomorrow = dayjs().$D + 1;
-  let twoDaysAfter = dayjs().$D + 2;
-  let threeDaysAfter = dayjs().$D + 3;
-  let fourDaysAfter = dayjs().$D + 4;
-  let fiveDaysAfter = dayjs().$D + 5;
-
-  date1.innerText = `${todaysMonth}/${tomorrow}`;
-  date1Temp.innerText = weatherValue.list[1].main.temp + "\u00B0 F";
-  date2.innerText = `${todaysMonth}/${twoDaysAfter}`;
-  date2Temp.innerText = weatherValue.list[2].main.temp + "\u00B0 F";
-  date3.innerText = `${todaysMonth}/${threeDaysAfter}`;
-  date3Temp.innerText = weatherValue.list[3].main.temp + "\u00B0 F";
-  date4.innerText = `${todaysMonth}/${fourDaysAfter}`;
-  date4Temp.innerText = weatherValue.list[4].main.temp + "\u00B0 F";
-  date5.innerText = `${todaysMonth}/${fiveDaysAfter}`;
-  date5Temp.innerText = weatherValue.list[5].main.temp + "\u00B0 F";
-
-  console.log(fiveDaysAfter);
+  [...Array(5).keys()] // generate array with indexes[ 0, 1, 2, 3, 4]
+    .map((k) => `date${k + 1}`) // map each element to the format "date1" "date2" etc
+    .forEach((id, index) => { // iterate the array with both the generated ids in the format you want and the index
+      // get the elements
+      const date = document.getElementById(id);
+      const dateTemp = document.getElementById(id + "Temp");
+      // set the day
+      const day = dayjs().$D + index + 1;
+      // edit html content
+      date.innerText = `${todaysMonth}/${day}`;
+      dateTemp.innerText = weatherValue.list[index + 1].main.temp + "\u00B0 F";
+    });
 };
