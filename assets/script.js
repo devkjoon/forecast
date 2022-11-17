@@ -59,17 +59,12 @@ let displayWeather = function (weatherData) {
 };
 
 let fiveDayWeather = function (weatherValue) {
+
   let todaysMonth = dayjs().$M;
-  [...Array(5).keys()] // generate array with indexes[ 0, 1, 2, 3, 4]
-    .map((k) => `date${k + 1}`) // map each element to the format "date1" "date2" etc
-    .forEach((id, index) => { // iterate the array with both the generated ids in the format you want and the index
-      // get the elements
-      const date = document.getElementById(id);
-      const dateTemp = document.getElementById(id + "Temp");
-      // set the day
-      const day = dayjs().$D + index + 1;
-      // edit html content
-      date.innerText = `${todaysMonth}/${day}`;
-      dateTemp.innerText = weatherValue.list[index + 1].main.temp + "\u00B0 F";
-    });
-};
+
+  for( let i = 1; i < 6; i++ ){
+
+      document.querySelector( "#date" + i ).innerText = `${todaysMonth}/${ dayjs().$D + i }`;
+      document.querySelector( "#date" + i + "Temp" ).innerText = weatherValue.list[i].main.temp + "\u00B0 F";
+  }
+}
