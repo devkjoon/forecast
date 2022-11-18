@@ -81,7 +81,7 @@ function getApi() {
       displayWeather(data);
     })
     .catch(() => {
-      alert("Unable to connect to OpenWeather");
+      alert("Please check your city name once again!");
     });
 }
 
