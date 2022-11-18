@@ -14,22 +14,22 @@ function load() {
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
     let fiveDayURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=b169b31281ffa2a2b70b9e8ac22c3e88&units=imperial`;
-  
+
     fetch(fiveDayURL)
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      fiveDayWeather(data);
-      console.log(data)
-      localStorage.setItem('response', JSON.stringify(data.city.name));
-      loadUrl()
-    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        fiveDayWeather(data);
+        console.log(data);
+        localStorage.setItem("response", JSON.stringify(data.city.name));
+        loadUrl();
+      });
   });
 }
 
 function loadUrl() {
-  let cityName = JSON.parse(localStorage.getItem('response'));
+  let cityName = JSON.parse(localStorage.getItem("response"));
 
   let requestURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=b169b31281ffa2a2b70b9e8ac22c3e88&units=imperial`;
   fetch(requestURL)
@@ -39,14 +39,16 @@ function loadUrl() {
     .then((data) => {
       // console.log(data);
       displayWeather(data);
+    })
+    .catch(() => {
+      alert("Unable to connect to OpenWeather");
     });
 }
-
 
 // uses user input as parameter to getApi()
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
-    e.preventDefault()
+    e.preventDefault();
     // let cityName = document.querySelectro("#userInput").value;
     // let li = document.createElement("li")
     // li.innerText = cityName;
@@ -69,10 +71,13 @@ function getApi() {
     .then((data) => {
       // console.log(data);
       displayWeather(data);
+    })
+    .catch(() => {
+      alert("Unable to connect to OpenWeather");
     });
 }
 
-// uses api data from getApi() and replaces text in html 
+// uses api data from getApi() and replaces text in html
 let displayWeather = function (weatherData) {
   document.querySelector("#cityName").innerText = weatherData.name;
   document.querySelector("#temperature").innerText =
@@ -91,8 +96,8 @@ let displayWeather = function (weatherData) {
     weatherData.main.humidity + "%";
   document.querySelector("#pressure").innerText =
     weatherData.main.pressure + " hPa";
-    
-    let fiveDayURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${weatherData.coord.lat}&lon=${weatherData.coord.lon}&appid=b169b31281ffa2a2b70b9e8ac22c3e88&units=imperial`;
+
+  let fiveDayURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${weatherData.coord.lat}&lon=${weatherData.coord.lon}&appid=b169b31281ffa2a2b70b9e8ac22c3e88&units=imperial`;
   fetch(fiveDayURL)
     .then((res) => {
       return res.json();
@@ -100,6 +105,9 @@ let displayWeather = function (weatherData) {
     .then((data) => {
       // console.log(data);
       fiveDayWeather(data);
+    })
+    .catch(() => {
+      alert("Unable to connect to OpenWeather");
     });
 };
 
