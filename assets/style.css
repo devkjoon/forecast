@@ -7,6 +7,7 @@ body {
    font-family: sans-serif;
    height: 500px;
    width: 100vw;
+   line-height: 1.25;
 }
 
 p {
@@ -29,7 +30,7 @@ p {
 }
 
 .left {
-   background-color: rgb(243, 243, 243);
+   background-color: #adb5bd;
    padding: 1rem;
    margin: 0;
 }
@@ -89,7 +90,7 @@ p {
 
 .deg {
    height: 50%;
-   background-color: rgb(189, 188, 188);
+   background-color: #adb5bd;
    border-radius: 5rem;
 }
 
@@ -205,4 +206,12 @@ nav {
 .subtitle {
    font-size: .75rem;
    text-align: center;
+}
+
+#userInput {
+   background-color: rgb(243, 243, 243);
+}
+
+img {
+   height: 50px;
 }
