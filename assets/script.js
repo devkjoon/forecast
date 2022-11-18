@@ -21,7 +21,7 @@ function load() {
       })
       .then((data) => {
         fiveDayWeather(data);
-        console.log(data);
+        // console.log(data);
         localStorage.setItem("response", JSON.stringify(data.city.name));
         loadUrl();
       });
@@ -45,18 +45,26 @@ function loadUrl() {
     });
 }
 
-// uses user input as parameter to getApi()
-input.addEventListener("keypress", function (e) {
+var searchHistory = localStorage.searchHistory
+  ? JSON.parse(localStorage.searchHistory)
+  : [];
+input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    e.preventDefault();
-    // let cityName = document.querySelectro("#userInput").value;
-    // let li = document.createElement("li")
-    // li.innerText = cityName;
-    // document.querySelector('ul');
-    // ul.appendChild(li);
-    getApi();
-    input.value = "";
+    e.preventDefault()
+  searchHistory.push(document.querySelector("#userInput").value);
+  localStorage.searchHistory = JSON.stringify(searchHistory);
+  getApi();
+  input.value = ""
   }
+});
+
+input.addEventListener("focus", () => {
+  var data = document.querySelector("datalist#searchdata");
+  data.innerHTML = "";
+  searchHistory.forEach((search) => {
+    data.innerHTML = "<option>" + data.innerHTML;
+    data.querySelector("option").innerText = search;
+  });
 });
 
 // fetches api using the user input

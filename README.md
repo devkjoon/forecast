@@ -51,7 +51,7 @@ Acceptance Criteria
 - Today's weather data will be shown on the right 
 - Future weather for the next five days will be below, consisting of condition, date, humidity, and wind speeds
 - Search bar on click will drop down to see previous searched history
-- Upon clicking this will prompt appplication to show that city's weather again.
+- Click the city of choice and press enter to prompt appplication to view that city's weather again.
 
 ## Screenshot
 
