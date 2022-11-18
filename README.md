@@ -2,7 +2,7 @@
 
 ## Description
 
-Search the current and future weather conditions for multiple cities.
+Search the current and future weather conditions for multiple cities. This application utilizes OpenWeather API to retrieve weather data for cities and displays the weather consisting of temperature, weather condition, humidity, and wind speed of the current day and the five following days.
 
 ## Table of Contents
 
@@ -63,3 +63,4 @@ See LICENSE in repo
 
 ## Deployed Link
 
+https://joonkidk.github.io/weather-dashboard/
