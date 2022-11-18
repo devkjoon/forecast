@@ -186,10 +186,6 @@ nav {
    justify-content: space-between;
 }
 
-.searchbar {
-   height: 24px;
-   width: 199.28px;
-}
 
 ::placeholder {
    text-align: center;
@@ -214,4 +210,12 @@ nav {
 
 img {
    height: 50px;
+}
+
+#right-header {
+   padding-top: 25px;
+}
+
+form {
+   display: inline-block;
 }

@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Weather Dashboard</title>
   </head>
-  <body>
+  <body onload="load()">
     <div class="container">
       <div class="card">
         <div class="row">
           <div class="col-9 left">
             <nav class="row top">
               <div class="col" id="cityName">City Name</div>
-              <div class="form-outline">
+              <form class="form-outline">
                 <input
                   type="search"
                   id="userInput"
@@ -26,7 +26,7 @@
                   placeholder="search for a city"
                   aria-label="Search"
                 />
-              </div>
+              </form>
               <div class="col" id="date">Date</div>
             </nav>
             <div class="row">
@@ -144,11 +144,6 @@
               <div class="row">Humidity:<b id="humidity">-4&deg;</b></div>
               <div class="row">Pressure:<b id="pressure">-4&deg;</b></div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script>
