@@ -21,13 +21,13 @@ function load() {
       })
       .then((data) => {
         fiveDayWeather(data);
-        // console.log(data);
         localStorage.setItem("response", JSON.stringify(data.city.name));
         loadUrl();
       });
   });
 }
 
+// uses the city name obtained from geocoordinates on load to fetch api for weather
 function loadUrl() {
   let cityName = JSON.parse(localStorage.getItem("response"));
 
@@ -37,7 +37,6 @@ function loadUrl() {
       return res.json();
     })
     .then((data) => {
-      // console.log(data);
       displayWeather(data);
     })
     .catch(() => {
@@ -77,7 +76,6 @@ function getApi() {
       return res.json();
     })
     .then((data) => {
-      // console.log(data);
       displayWeather(data);
     })
     .catch(() => {
@@ -111,7 +109,6 @@ let displayWeather = function (weatherData) {
       return res.json();
     })
     .then((data) => {
-      // console.log(data);
       fiveDayWeather(data);
     })
     .catch(() => {
